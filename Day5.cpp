@@ -4,21 +4,33 @@
 //
 //Answer : if y is divisible by 2 then muliply x^(y/2)) with itself
 #include <iostream>
+#include <math.h>
 using namespace std;
-long long exponent (int x, int y){
-	if(y==0)
+double exponent (double x, double y){
+	int exponentval;
+	double base;
+	if(y<0)
+	{
+		base= (pow((double)x,(double)-1));
+		exponentval=y*(-1);
+	}
+	else{
+		base=x;
+		exponentval=y;
+	}
+	if(exponentval==0)
 	  return 1;
-	else if (y%2==1)
-	  return  x*exponent(x, y-1);
+	else if (exponentval%2==1)
+	  return  base*exponent(base, exponentval-1);
 	else
 	{
-		long long a= exponent(x, y/2);
+		double a= exponent(base, exponentval/2);
 		return a*a;
 	}
 };
 int main(){
 	int x=2;
-	int y=10;
+	int y = 10;
 	cout<<exponent(x,y);
 	return 	0;
 };
