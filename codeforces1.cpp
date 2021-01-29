@@ -72,20 +72,3 @@ int main()
 	return 0;
 
 }
-//for(int j=0; j<x; j++)
-//		{
-//			if(mat[j]!=0)
-//			{
-//				for(int k=0; k<x;k++)
-//				{
-//					if((mat[k]&mat[j])!=0)
-//					{
-//						for(int m=0; m<x;m++)
-//						{
-//							long long z=  (((mat[k]&mat[j])%((long long)pow((double)10,(double)9)+7))*((mat[k]|mat[m])%((long long)pow((double)10,(double)9)+7)))%((long long)pow((double)10,(double)9)+7);
-//		//					unsigned long long z= (((mat[k]&mat[j])*(mat[k]|mat[m]))%((long long)pow((double)10,(double)9)+7))%((long long)pow((double)10,(double)9)+7);	
-//							count=(count + z)%((long long)pow((double)10,(double)9)+7);
-//						}
-//					}			
-//				}
-//			}
